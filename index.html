@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreboard</title>
+    <link
+      rel="shortcut icon"
+      href="/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <center><h1>BASKET-BALL SCOREBOARD</h1></center>
+    <div class="score-container">
+      <div class="team">
+        <h2>Home Team</h2>
+        <div id="home-score" class="score">0</div>
+        <button id="homeOne" class="score-add" onclick="addOne()">+1</button>
+        <button id="homeTwo" class="score-add" onclick="addTwo()">+2</button>
+        <button id="homeThree" class="score-add" onclick="addThree()">
+          +3
+        </button>
+        <button id="homeReduce" class="score-minus" onclick="reduce()">
+          Foul(-1)
+        </button>
+      </div>
+      <div class="timer" id="timer">00:00:00</div>
+      <button id="start" class="start" onclick="startTimer()">Start Game</button>
+      <div class="team">
+        <h2>Guest Team</h2>
+        <div id="guest-score" class="score">0</div>
+        <button id="guestOne" class="score-add" onclick="gAddOne()">+1</button>
+        <button id="guestTwo" class="score-add" onclick="gAddTwo()">+2</button>
+        <button id="guestThree" class="score-add" onclick="gAddThree()">+3</button>
+        <button id="Reduce" class="score-minus" onclick="gReduce()">Foul(-1)</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

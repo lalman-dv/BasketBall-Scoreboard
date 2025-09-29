@@ -1,15 +1,29 @@
+:root {
+  --score-color: rgb(168, 254, 156);
+  --foul-color: #f88533;
+  --start-color: #33f8b0;
+  --blur-bg: rgba(0, 0, 0, 0.28);
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 body {
   background-image: url(/pexels-chrisgrantharvey-33669419.jpg);
   background-position: center;
+  background-size: cover;
   backdrop-filter: blur(3px);
   height: 100vh;
+  font-family: "Outfit", sans-serif;
 }
-center {
+
+.title {
+  text-align: center;
   color: white;
+  padding: 1rem;
   background-image: linear-gradient(
     to bottom,
     rgb(83, 84, 84),
@@ -17,6 +31,7 @@ center {
   );
   backdrop-filter: blur(10px);
 }
+
 .score-container {
   background: #00000084;
   backdrop-filter: blur(15px);
@@ -26,61 +41,75 @@ center {
   align-items: center;
   height: 50vh;
   margin-top: 20vh;
+  flex-wrap: wrap;
 }
+
 .team {
-  font-family: "Outfit", sans-serif;
   font-weight: 700;
   font-size: 40px;
+  text-align: center;
 }
+
+.score-add,
+.score-minus,
+.start {
+  background-color: var(--blur-bg);
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  margin: 10px;
+}
+
 .score-add {
-  background-color: rgba(0, 0, 0, 0.28);;
-  color: rgb(168, 254, 156);
-  margin: 20px;
+  color: var(--score-color);
   width: 50px;
   height: 30px;
-  border: 0px;
   box-shadow: 0 0 10px green;
-  border-radius: 20px;
-  transition: 0.2s;
-  cursor: pointer;
 }
-.score-add:hover {
-  transform: scale(1.2);
-}
+
 .score-minus {
-  background-color: rgba(0, 0, 0, 0.28);;
-  color: #f88533;
+  color: var(--foul-color);
   width: 70px;
   height: 40px;
-  border: 0px;
-  box-shadow: 0 0 15px #f88533;
-  border-radius: 20px;
-  transition: 0.2s;
-  cursor: pointer;
+  box-shadow: 0 0 15px var(--foul-color);
 }
-.score-minus:hover {
-  transform: scale(1.2);
-}
+
 .start {
-  background-color: rgba(0, 0, 0, 0.28);
-  color: #33f8b0;
+  color: var(--start-color);
   width: 150px;
   height: 50px;
-  border: 0px;
-  box-shadow: 0 0 15px #33f8b0;
-  border-radius: 20px;
-  transition: 0.2s;
-  cursor: pointer;
+  box-shadow: 0 0 15px var(--start-color);
 }
+
+.score-add:hover,
+.score-minus:hover,
 .start:hover {
   transform: scale(1.2);
 }
 
-.timer{
+.timer {
   font-family: "Bitcount Prop Single Ink", system-ui;
   font-size: 5vw;
+  text-align: center;
 }
-.score{
-  margin-left: 10vw;
+#pause {
+  background-color: rgba(255, 255, 0, 0.2); /* soft yellow */
+  box-shadow: 0 0 15px yellow;
+}
+
+#reset {
+  background-color: rgba(255, 0, 0, 0.2); /* soft red */
+  box-shadow: 0 0 15px red;
+}
+
+.score {
   font-size: 80px;
+  margin: 1rem 0;
+}
+
+.center-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

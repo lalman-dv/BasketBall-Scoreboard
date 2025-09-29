@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scoreboard</title>
+    <title>Basketball Scoreboard</title>
     <link
       rel="shortcut icon"
       href="/android-chrome-192x192.png"
@@ -18,31 +18,84 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <center><h1>BASKET-BALL SCOREBOARD</h1></center>
-    <div class="score-container">
-      <div class="team">
+    <header>
+      <h1 class="title">🏀 BASKETBALL SCOREBOARD</h1>
+    </header>
+
+    <main class="score-container">
+      <section class="team" aria-label="Home Team">
         <h2>Home Team</h2>
         <div id="home-score" class="score">0</div>
-        <button id="homeOne" class="score-add" onclick="addOne()">+1</button>
-        <button id="homeTwo" class="score-add" onclick="addTwo()">+2</button>
-        <button id="homeThree" class="score-add" onclick="addThree()">
+        <button id="homeOne" class="score-add" aria-label="Add 1 point to Home">
+          +1
+        </button>
+        <button
+          id="homeTwo"
+          class="score-add"
+          aria-label="Add 2 points to Home"
+        >
+          +2
+        </button>
+        <button
+          id="homeThree"
+          class="score-add"
+          aria-label="Add 3 points to Home"
+        >
           +3
         </button>
-        <button id="homeReduce" class="score-minus" onclick="reduce()">
-          Foul(-1)
+        <button
+          id="homeReduce"
+          class="score-minus"
+          aria-label="Reduce 1 point from Home"
+        >
+          Foul (-1)
         </button>
+      </section>
+
+      <div class="center-controls">
+        <div class="timer" id="timer">00:00:00</div>
+        <button id="start" class="start" aria-label="Start Game Timer">
+          Start Game
+        </button>
+        <button id="pause" class="start" aria-label="Pause or Resume Timer">
+          Pause
+        </button>
+        <button id="reset" class="start" aria-label="Reset Game">Reset</button>
       </div>
-      <div class="timer" id="timer">00:00:00</div>
-      <button id="start" class="start" onclick="startTimer()">Start Game</button>
-      <div class="team">
+
+      <section class="team" aria-label="Guest Team">
         <h2>Guest Team</h2>
         <div id="guest-score" class="score">0</div>
-        <button id="guestOne" class="score-add" onclick="gAddOne()">+1</button>
-        <button id="guestTwo" class="score-add" onclick="gAddTwo()">+2</button>
-        <button id="guestThree" class="score-add" onclick="gAddThree()">+3</button>
-        <button id="Reduce" class="score-minus" onclick="gReduce()">Foul(-1)</button>
-      </div>
-    </div>
+        <button
+          id="guestOne"
+          class="score-add"
+          aria-label="Add 1 point to Guest"
+        >
+          +1
+        </button>
+        <button
+          id="guestTwo"
+          class="score-add"
+          aria-label="Add 2 points to Guest"
+        >
+          +2
+        </button>
+        <button
+          id="guestThree"
+          class="score-add"
+          aria-label="Add 3 points to Guest"
+        >
+          +3
+        </button>
+        <button
+          id="guestReduce"
+          class="score-minus"
+          aria-label="Reduce 1 point from Guest"
+        >
+          Foul (-1)
+        </button>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>

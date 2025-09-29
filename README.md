@@ -7,28 +7,31 @@ A responsive, real-time basketball scoreboard built using HTML, CSS, and JavaScr
 Scoreboard UI  
 The interface features a blurred basketball background, animated buttons, and a digital timer centered between Home and Guest teams. Buttons scale on hover, and the layout adapts responsively across screen sizes.
 
+🌐 Live Demo  
+View the deployed app here: https://basketballscoreboar.netlify.app/
+
 ✨ Features
 
 • 🏠 Home & Guest Team Score Tracking  
-  Buttons for +1, +2, +3, and foul (-1) per team, each with unique IDs for modular JS control.
+ Buttons for +1, +2, +3, and foul (-1) per team, each with unique IDs for modular JS control.
 
 • ⏱️ Countdown Timer with User Input  
-  Prompts the user to enter a set duration (in minutes) and runs a reverse countdown from that time.
+ Prompts the user to enter a set duration (in minutes) and runs a reverse countdown from that time.
 
 • ⏸️ Pause/Resume Functionality  
-  Toggle button allows the timer to pause and resume seamlessly during gameplay.
+ Toggle button allows the timer to pause and resume seamlessly during gameplay.
 
 • 🚫 Foul Limit Enforcement  
-  Each team can commit up to 5 fouls. Once the limit is reached, the foul button disables and displays a visual alert.
+ Each team can commit up to 5 fouls. Once the limit is reached, the foul button disables and displays a visual alert.
 
 • 🔄 Reset Button  
-  Clears scores, fouls, and timer state with a single click, resetting the game for a fresh start.
+ Clears scores, fouls, and timer state with a single click, resetting the game for a fresh start.
 
 • 🎨 Responsive UI Design  
-  Includes backdrop blur, gradient overlays, and animated button scaling for a modern, immersive feel.
+ Includes backdrop blur, gradient overlays, and animated button scaling for a modern, immersive feel.
 
 • 🖱️ Interactive Buttons  
-  Buttons scale on hover with smooth transitions, enhancing user feedback and engagement.
+ Buttons scale on hover with smooth transitions, enhancing user feedback and engagement.
 
 🛠️ Technologies Used
 
@@ -39,9 +42,9 @@ The interface features a blurred basketball background, animated buttons, and a 
 
 📁 File Structure
 
-├── index.html       # Semantic HTML structure and layout  
-├── style.css        # Styling, transitions, and responsive design  
-└── script.js        # Score logic, countdown timer, pause/resume, reset, foul limits
+├── index.html # Semantic HTML structure and layout  
+├── style.css # Styling, transitions, and responsive design  
+└── script.js # Score logic, countdown timer, pause/resume, reset, foul limits
 
 🎯 Project Goals
 
